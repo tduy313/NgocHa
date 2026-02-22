@@ -1,4 +1,4 @@
-/* RESET */
+/* ================= RESET ================= */
 *,
 *::before,
 *::after {
@@ -12,23 +12,31 @@
     src: url("Pacifico-Regular.ttf");
 }
 
-/* HTML + BODY */
+/* ================= BASE ================= */
 html, body {
     width: 100%;
     height: 100%;
-    font-family: Arial, sans-serif;
     background: #000;
+    font-family: Arial, sans-serif;
     overflow: hidden;
 }
 
-/* MAIN */
+/* XÓA ẢNH HƯỞNG LOADING */
+body.loading .content,
+body.loading .content__title,
+body.loading .content__title-sub,
+body.loading .content__title-11 {
+    opacity: 1 !important;
+}
+
+/* ================= MAIN ================= */
 main {
     width: 100%;
     height: 100vh;
     position: relative;
 }
 
-/* CONTENT CENTER */
+/* ================= CONTENT CENTER ================= */
 .content {
     position: relative;
     width: 100%;
@@ -40,7 +48,7 @@ main {
     z-index: 10;
 }
 
-/* GRID BACKGROUND */
+/* ================= GRID BACKGROUND ================= */
 .grid {
     position: absolute;
     inset: 0;
@@ -53,7 +61,6 @@ main {
 }
 
 .grid__item {
-    position: relative;
     opacity: 0.4;
 }
 
@@ -82,33 +89,34 @@ main {
 .pos-9 { grid-area: 40 / 26 / 51 / 32; }
 .pos-10 { grid-area: 37 / 39 / 48 / 47; }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .grid__item {
-        opacity: 0.25;
-    }
+/* ================= TITLE ================= */
+.content__title {
+    margin-bottom: 20px;
 }
 
-/* TITLE */
-.content__title {
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #fff;
+.content__title-11 {
+    display: inline-block;
+    font-size: 60px;
 
     opacity: 0;
-    animation: fadeUp 1s ease-out forwards;
+    transform: translateY(40px);
+
+    animation: fadeUp 1.2s ease-out forwards;
+
+    background: linear-gradient(45deg, #ff7a00, #ffd000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+/* SUB TEXT */
 .content__title-sub {
     max-width: 900px;
-    width: 100%;
+    margin: 20px auto 0 auto;
     text-align: center;
     line-height: 1.6;
-    margin-bottom: 20px;
 
     font-family: myFont;
-    font-size: 30px;
+    font-size: 28px;
     color: #ffe0b2;
 
     text-shadow:
@@ -117,22 +125,12 @@ main {
         0 0 20px rgba(255,200,150,0.3);
 
     opacity: 0;
-    animation: fadeUp 1s ease-out 0.5s forwards;
+    transform: translateY(40px);
+
+    animation: fadeUp 1.2s ease-out 0.6s forwards;
 }
 
-.content__title-11 {
-    font-size: 50px;
-    text-align: center;
-
-    opacity: 0;
-    animation: slideIn 1.5s ease-out 1s forwards;
-
-    background: linear-gradient(45deg, #ff7a00, #ffd000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* ANIMATIONS */
+/* ================= ANIMATION ================= */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -144,13 +142,18 @@ main {
     }
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-100px);
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .grid__item {
+        opacity: 0.25;
     }
-    to {
-        opacity: 1;
-        transform: translateX(0);
+
+    .content__title-11 {
+        font-size: 40px;
+    }
+
+    .content__title-sub {
+        font-size: 20px;
+        padding: 0 20px;
     }
 }
