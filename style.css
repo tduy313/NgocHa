@@ -268,6 +268,10 @@ a:focus {
 	display: none;
 }
 
+@media screen and (min-width: 53em) {
+	.message {
+		display: none;
+	}
 	.frame {
 		position: fixed;
 		text-align: left;
@@ -400,80 +404,3 @@ a:focus {
     -webkit-text-fill-color: transparent;
 }
 
-/* Hiển thị trên điện thoại màn hình dọc */
-@media screen and (max-width: 768px) and (orientation: portrait) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .grid__item {
-    width: 90%;
-    height: 150px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .content__title {
-    font-size: 20px;
-    text-align: center;
-    margin-top: 15px;
-  }
-
-  .content__title-sub {
-    font-size: 14px;
-    line-height: 1.5;
-    text-align: center;
-    padding: 0 12px;
-  }
-
-  .cursor {
-    display: none;
-  }
-}
-
-/* Hiển thị trên điện thoại màn hình ngang */
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  body {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-  }
-
-  .grid__item {
-    flex: 1 1 45%; /* mỗi item chiếm khoảng nửa chiều ngang */
-    height: 120px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .content__title {
-    font-size: 18px;
-    text-align: center;
-    margin-top: 12px;
-  }
-
-  .content__title-sub {
-    font-size: 14px;
-    line-height: 1.4;
-    text-align: center;
-    padding: 0 10px;
-  }
-
-  .cursor {
-    display: none;
-  }
-}
