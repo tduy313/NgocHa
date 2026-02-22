@@ -398,7 +398,7 @@ a:focus {
     -webkit-text-fill-color: transparent;
 }
 
-/* ================= MOBILE FIX ================= */
+/* ================= FORCE MOBILE LAYOUT ================= */
 
 @media screen and (max-width: 768px) {
 
@@ -406,35 +406,44 @@ a:focus {
         overflow-x: hidden;
     }
 
+    /* Ẩn dòng desktop */
     .message {
-        display: none;
+        display: none !important;
     }
 
+    /* Reset toàn bộ grid cũ */
     .grid {
+        all: unset;
         display: grid !important;
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
-        width: 90%;
+        width: 92%;
         margin: 0 auto;
-        transform: none !important;
+        margin-top: 40px;
     }
 
+    /* Reset từng item */
     .grid__item {
-        position: relative !important;
+        all: unset;
+        display: block;
     }
 
     .grid__item-img {
+        width: 100%;
         height: 160px;
-        background-size: cover;
-        background-position: center;
+        background-size: cover !important;
+        background-position: center !important;
+        border-radius: 12px;
     }
 
+    /* Title */
     .content__title {
-        font-size: 8vw !important;
+        font-size: 9vw !important;
         text-align: center;
         margin-top: 30px;
     }
 
+    /* Sub text */
     .content__title-sub {
         font-size: 4vw;
         text-align: center;
@@ -442,7 +451,8 @@ a:focus {
         line-height: 1.6;
     }
 
+    /* Ẩn hiệu ứng chuột */
     .cursor {
-        display: none;
+        display: none !important;
     }
 }
