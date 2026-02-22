@@ -1,4 +1,4 @@
-chỉnh hoàn chỉnh vô css cho tôi /* ================= RESET ================= */
+/* ================= RESET ================= */
 *,
 *::before,
 *::after {
@@ -94,19 +94,10 @@ main {
 .content__title-11 {
     font-size: 50px;
     text-align: center;
-    display: inline-block;
-
-    /* MÀU GIỐNG ẢNH */
-    color: #ffb300;
-
-    /* ĐỔ BÓNG GIỐNG ẢNH */
-    text-shadow:
-        0 4px 8px rgba(0,0,0,0.8),
-        0 0 12px rgba(255,180,0,0.4);
-
-    opacity: 0;
-    transform: translateY(40px);
-    animation: slideIn 1.5s ease-out forwards;
+    animation: slideIn 2s ease-out forwards;
+    background: linear-gradient(45deg, #ff7a00, #ffd000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* ================= SUB TEXT ================= */
