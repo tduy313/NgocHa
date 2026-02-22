@@ -93,15 +93,14 @@ main {
 }
 
 .content__title-11 {
-    display: inline-block;
-    font-size: 60px;
     font-family: 'myFont', cursive;
+    font-size: 65px;
+    color: #ffe0b2;
 
-    background: linear-gradient(45deg, #ff7a00, #ffd000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    text-shadow: 0 0 25px rgba(255, 180, 100, 0.7);
+    text-shadow:
+        0 2px 4px rgba(0,0,0,0.9),
+        0 4px 15px rgba(0,0,0,0.8),
+        0 0 20px rgba(255,200,150,0.3);
 
     opacity: 0;
     transform: translateY(40px);
@@ -152,7 +151,7 @@ main {
     }
 
     .content__title-11 {
-        font-size: 40px;
+        font-size: 42px;
     }
 
     .content__title-sub {
