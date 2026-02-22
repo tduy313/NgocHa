@@ -2,6 +2,7 @@
 <html lang="vi" class="no-js">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Happy Women’s Day!</title>
 		<link rel="shortcut icon" href="./rose.png">
@@ -14,11 +15,14 @@ var supportsCssVars = function supportsCssVars() {
       t = document.createElement("style");
   return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
 };
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 	</head>
 	<body class="demo-1 loading">
 		<main>
+			<div class="message">Please view this demo on a desktop to see the effect.</div>
+			<div class="frame">
+			</div>
 			<div class="content">
 				<div class="grid">
 					<div class="grid__item pos-2"><div class="grid__item-img" style="background-image:url(./img/img1.png);" class="hover" ></div></div>
