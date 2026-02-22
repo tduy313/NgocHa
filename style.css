@@ -92,22 +92,11 @@ main {
 }
 
 .content__title-11 {
-    font-size: 65px;
-    font-weight: bold;
-    display: inline-block;
-
-    background: linear-gradient(
-        45deg,
-        #ff8a00 0%,
-        #ff9f1a 30%,
-        #ffb800 60%,
-        #ffd43b 100%
-    );
-
-    background-clip: text;
+    font-size: 50px;
+    text-align: center;
+    animation: slideIn 2s ease-out forwards;
+    background: linear-gradient(45deg, #ff7a00, #ffd000);
     -webkit-background-clip: text;
-
-    color: transparent;
     -webkit-text-fill-color: transparent;
 }
 
