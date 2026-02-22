@@ -400,7 +400,46 @@ a:focus {
     -webkit-text-fill-color: transparent;
 }
 
-/* Tối ưu cho điện thoại màn hình ngang */
+/* Hiển thị trên điện thoại màn hình dọc */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .grid__item {
+    width: 90%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content__title {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .content__title-sub {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  .cursor {
+    display: none;
+  }
+}
+
+/* Hiển thị trên điện thoại màn hình ngang */
 @media screen and (max-width: 768px) and (orientation: landscape) {
   body {
     font-size: 14px;
@@ -416,7 +455,7 @@ a:focus {
 
   .grid__item {
     flex: 1 1 45%; /* mỗi item chiếm khoảng nửa chiều ngang */
-    height: 120px; /* giảm chiều cao để vừa màn hình ngang */
+    height: 120px;
     background-size: cover;
     background-position: center;
   }
@@ -434,7 +473,6 @@ a:focus {
     padding: 0 10px;
   }
 
-  /* Ẩn hiệu ứng chuột trên mobile */
   .cursor {
     display: none;
   }
