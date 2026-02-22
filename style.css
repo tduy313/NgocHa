@@ -400,22 +400,22 @@ a:focus {
     -webkit-text-fill-color: transparent;
 }
 
-/* Khi màn hình nhỏ hơn 768px và xoay ngang */
+/* Tối ưu cho điện thoại màn hình ngang */
 @media screen and (max-width: 768px) and (orientation: landscape) {
   body {
     font-size: 14px;
-    padding: 10px;
+    padding: 8px;
   }
 
   .grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 6px;
   }
 
   .grid__item {
-    flex: 1 1 45%; /* mỗi item chiếm khoảng nửa màn hình */
-    margin: 5px;
+    flex: 1 1 45%; /* mỗi item chiếm khoảng nửa chiều ngang */
     height: 120px; /* giảm chiều cao để vừa màn hình ngang */
     background-size: cover;
     background-position: center;
@@ -424,7 +424,7 @@ a:focus {
   .content__title {
     font-size: 18px;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 12px;
   }
 
   .content__title-sub {
@@ -432,5 +432,10 @@ a:focus {
     line-height: 1.4;
     text-align: center;
     padding: 0 10px;
+  }
+
+  /* Ẩn hiệu ứng chuột trên mobile */
+  .cursor {
+    display: none;
   }
 }
