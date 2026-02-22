@@ -7,20 +7,12 @@
     padding: 0;
 }
 
-/* ================= FONT ================= */
-@font-face {
-    font-family: 'myFont';
-    src: url("Pacifico-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* ================= BASE ================= */
 html, body {
     width: 100%;
     height: 100%;
     background: #000;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe Script", "Brush Script MT", cursive;
     overflow: hidden;
 }
 
@@ -93,7 +85,6 @@ main {
 }
 
 .content__title-11 {
-    font-family: 'myFont', cursive;
     font-size: 65px;
     color: #ffe0b2;
 
@@ -102,9 +93,8 @@ main {
         0 4px 15px rgba(0,0,0,0.8),
         0 0 20px rgba(255,200,150,0.3);
 
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeUp 1.2s ease-out forwards;
+    opacity: 1;
+    transform: none;
 }
 
 /* ================= SUB TEXT ================= */
@@ -114,7 +104,6 @@ main {
     text-align: center;
     line-height: 1.6;
 
-    font-family: 'myFont', cursive;
     font-size: 28px;
     color: #ffe0b2;
 
@@ -125,22 +114,6 @@ main {
         0 2px 4px rgba(0,0,0,0.9),
         0 4px 15px rgba(0,0,0,0.8),
         0 0 20px rgba(255,200,150,0.3);
-
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeUp 1.2s ease-out 0.6s forwards;
-}
-
-/* ================= ANIMATION ================= */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* ================= RESPONSIVE ================= */
