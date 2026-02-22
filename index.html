@@ -91,25 +91,44 @@ document.addEventListener('touchmove', function (e) {
         e.preventDefault();
     }
 }, { passive: false });
-</script>
-		<script>
+</script><script>
 const grid = document.querySelector(".grid");
 
-function handleOrientation(event) {
-    let tiltX = event.beta;   // trước sau
-    let tiltY = event.gamma;  // trái phải
+/* ===== CHỈNH ĐỘ MẠNH Ở ĐÂY ===== */
+const sensitivity = 5;   // tăng lên 3 hoặc 4 nếu muốn mạnh hơn
 
-    // Giới hạn góc để không xoay quá mạnh
+let currentX = 0;
+let currentY = 0;
+let targetX = 0;
+let targetY = 0;
+
+function animate() {
+    currentX += (targetX - currentX) * 0.1;
+    currentY += (targetY - currentY) * 0.1;
+
+    grid.style.transform = `
+        rotateX(${currentX}deg)
+        rotateY(${currentY}deg)
+        scale(1.05)
+    `;
+
+    requestAnimationFrame(animate);
+}
+animate();
+
+function handleOrientation(event) {
+    let tiltX = event.beta || 0;
+    let tiltY = event.gamma || 0;
+
+    // Giới hạn góc
     tiltX = Math.max(-30, Math.min(30, tiltX));
     tiltY = Math.max(-30, Math.min(30, tiltY));
 
-    const rotateX = tiltX / 5;
-    const rotateY = tiltY / 5;
-
-    grid.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    targetX = tiltX * sensitivity;
+    targetY = tiltY * sensitivity;
 }
 
-// iOS cần xin quyền
+/* iOS cần xin quyền */
 if (typeof DeviceOrientationEvent !== "undefined" &&
     typeof DeviceOrientationEvent.requestPermission === "function") {
 
