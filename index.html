@@ -51,5 +51,21 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 			<circle class="cursor__inner" cx="40" cy="40" r="20"></circle>
 		</svg>
 		<script src="./script.js"></script>
+		<script>
+function forceLandscape() {
+  if (window.innerHeight > window.innerWidth) {
+    document.body.style.transform = "rotate(90deg)";
+    document.body.style.transformOrigin = "left top";
+    document.body.style.width = window.innerHeight + "px";
+    document.body.style.height = window.innerWidth + "px";
+  } else {
+    document.body.style.transform = "";
+    document.body.style.width = "100%";
+    document.body.style.height = "100%";
+  }
+}
+window.addEventListener("resize", forceLandscape);
+window.addEventListener("load", forceLandscape);
+</script>
 	</body>
 </html>
