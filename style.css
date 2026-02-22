@@ -128,3 +128,52 @@ body {
     margin: 0;
     overflow: hidden;   /* không cho cuộn */
 }
+
+.content__title {
+    font-size: 40px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+    margin-bottom: 30px;   /* 👈 khoảng cách phía dưới */
+	pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.content__title-sub {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto 20px auto;  /* 👈 20px phía dưới */
+    text-align: center;
+    line-height: 1.6;
+	pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    font-family: myFont;
+
+    white-space: normal !important;
+    overflow-wrap: break-word;
+
+    font-size: 30px;
+    color: #ffe0b2;
+
+    text-shadow:
+        0 2px 4px rgba(0,0,0,0.9),
+        0 4px 15px rgba(0,0,0,0.8),
+        0 0 20px rgba(255,200,150,0.3);
+
+    opacity: 0;
+    animation: fadeUp 1s ease-out 0.5s forwards;
+}
+
+.content__title-11 {
+    font-size: 50px;
+    text-align: center;
+    animation: slideIn 2s ease-out forwards;
+    background: linear-gradient(45deg, #ff7a00, #ffd000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
