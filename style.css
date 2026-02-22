@@ -132,3 +132,8 @@ html {
 main {
     perspective: 1000px;
 }
+body {
+    background: #000;   /* nền đen */
+    margin: 0;
+    overflow: hidden;   /* không cho cuộn */
+}
