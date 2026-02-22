@@ -406,21 +406,26 @@ a:focus {
 
 body {
   margin: 0;
-  background: #000; /* nền đen */
+  background: #000;
   color: #fff;
   font-family: 'Arial', sans-serif;
 }
 
 .women-day {
   position: relative;
-  text-align: center;
-  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .collage {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
 }
 
 .photo img {
@@ -428,6 +433,7 @@ body {
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+  box-shadow: 0 0 8px rgba(255,255,255,0.2);
 }
 
 .message {
@@ -436,17 +442,42 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 90%;
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
+  background: rgba(0,0,0,0.7);
+  padding: 20px 30px;
   border-radius: 12px;
+  text-align: center;
 }
 
 .message h1 {
-  font-size: 2rem;
-  color: #ffcc33; /* vàng cam nổi bật */
+  font-size: 2.2rem;
+  color: #ffcc33;
+  margin-bottom: 15px;
 }
 
 .message p {
   font-size: 1rem;
-  color: #f5deb3; /* màu kem nhẹ */
+  line-height: 1.6;
+  color: #f5deb3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .message h1 {
+    font-size: 1.8rem;
+  }
+  .message p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .collage {
+    grid-template-columns: 1fr 1fr;
+  }
+  .message h1 {
+    font-size: 1.5rem;
+  }
+  .message p {
+    font-size: 0.9rem;
+  }
 }
