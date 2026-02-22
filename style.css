@@ -79,6 +79,33 @@ main {
 .pos-8 { grid-area: 38 / 14 / 46 / 22; }
 .pos-9 { grid-area: 40 / 26 / 51 / 32; }
 .pos-10 { grid-area: 37 / 39 / 48 / 47; }
+
+/* TITLE */
+.content__title {
+    font-family: myFont;
+    font-size: clamp(40px, 6vw, 70px);
+    text-align: center;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.content__title-11 {
+    background: linear-gradient(45deg, #ff7a00, #ffd000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* MESSAGE */
+.content__title-sub {
+    font-family: myFont;
+    max-width: 900px;
+    width: 90%;
+    text-align: center;
+    line-height: 1.6;
+    font-size: clamp(18px, 2.5vw, 30px);
+    color: #ffe0b2;
+    z-index: 2;
+
     text-shadow:
         0 2px 4px rgba(0,0,0,0.9),
         0 4px 15px rgba(0,0,0,0.8),
