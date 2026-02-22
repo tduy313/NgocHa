@@ -514,3 +514,9 @@ html, body {
         z-index: 9999;
     }
 }
+
+.grid__item-img {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
