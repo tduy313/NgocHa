@@ -122,3 +122,13 @@ main {
 html {
     -webkit-text-size-adjust: 100%;
 }
+
+.grid {
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+}
+
+main {
+    perspective: 1000px;
+}
