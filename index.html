@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<meta name="screen-orientation" content="landscape">
 		<meta name="x5-orientation" content="landscape">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 		<title>Happy Women’s Day!</title>
 		<link rel="shortcut icon" href="./rose.png">
 		<link rel="stylesheet" href="https://use.typekit.net/eqx3jwb.css">
@@ -76,6 +76,21 @@ function forceLandscape() {
 
 window.addEventListener("load", forceLandscape);
 window.addEventListener("resize", forceLandscape);
+</script>
+		<script>
+document.addEventListener('gesturestart', function (e) {
+    e.preventDefault();
+});
+
+document.addEventListener('dblclick', function (e) {
+    e.preventDefault();
+}, { passive: false });
+
+document.addEventListener('touchmove', function (e) {
+    if (e.scale !== undefined && e.scale !== 1) {
+        e.preventDefault();
+    }
+}, { passive: false });
 </script>
 	</body>
 </html>
