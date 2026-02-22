@@ -52,20 +52,30 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 		</svg>
 		<script src="./script.js"></script>
 		<script>
-		function forceLandscape() {
-  			if (window.innerHeight > window.innerWidth) {
-			    document.body.style.transform = "rotate(90deg)";
-			    document.body.style.transformOrigin = "left top";
-			    document.body.style.width = window.innerHeight + "px";
-			    document.body.style.height = window.innerWidth + "px";
-		  } else {
-		    document.body.style.transform = "";
-		    document.body.style.width = "100%";
-		    document.body.style.height = "100%";
-		  }
-		}
-		window.addEventListener("resize", forceLandscape);
-		window.addEventListener("load", forceLandscape);
-		</script>
+function forceLandscape() {
+    const body = document.body;
+
+    if (window.innerHeight > window.innerWidth) {
+        body.style.position = "absolute";
+        body.style.top = "0";
+        body.style.left = "0";
+        body.style.width = window.innerHeight + "px";
+        body.style.height = window.innerWidth + "px";
+        body.style.transform = "rotate(90deg)";
+        body.style.transformOrigin = "top left";
+        body.style.overflow = "hidden";
+    } else {
+        body.style.position = "";
+        body.style.width = "";
+        body.style.height = "";
+        body.style.transform = "";
+        body.style.transformOrigin = "";
+        body.style.overflow = "";
+    }
+}
+
+window.addEventListener("load", forceLandscape);
+window.addEventListener("resize", forceLandscape);
+</script>
 	</body>
 </html>
