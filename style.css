@@ -489,6 +489,8 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+	overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Khi người dùng xoay dọc, tự xoay nội dung sang ngang */
