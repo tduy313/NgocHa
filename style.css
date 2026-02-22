@@ -120,10 +120,6 @@ main {
     position: relative;
     z-index: 20;
 
-    text-shadow:
-        0 2px 4px rgba(0,0,0,0.9),
-        0 4px 15px rgba(0,0,0,0.8),
-        0 0 20px rgba(255,200,150,0.3);
 
     opacity: 0;
     transform: translateY(40px);
