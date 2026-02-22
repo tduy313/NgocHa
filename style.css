@@ -268,10 +268,6 @@ a:focus {
 	display: none;
 }
 
-@media screen and (min-width: 53em) {
-	.message {
-		display: none;
-	}
 	.frame {
 		position: fixed;
 		text-align: left;
@@ -404,3 +400,37 @@ a:focus {
     -webkit-text-fill-color: transparent;
 }
 
+/* Khi màn hình nhỏ hơn 768px và xoay ngang */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .grid__item {
+    flex: 1 1 45%; /* mỗi item chiếm khoảng nửa màn hình */
+    margin: 5px;
+    height: 120px; /* giảm chiều cao để vừa màn hình ngang */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content__title {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .content__title-sub {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 10px;
+  }
+}
