@@ -6432,3 +6432,84 @@ parcelRequire = (function (modules, cache, entry, globalName) {
     document.body.classList.remove("loading");
     document.body.classList.add("loaded");
 });
+
+/* ================= FIX MOBILE FULL ================= */
+
+@media (max-width: 768px) {
+
+    /* Bỏ layout absolute gây vỡ */
+    .grid {
+        position: relative !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .grid__item {
+        position: relative !important;
+        width: 100% !important;
+        height: 140px !important;
+        transform: none !important;
+    }
+
+    .grid__item-img {
+        width: 100%;
+        height: 100%;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    /* Cho tiêu đề xuống dưới ảnh */
+    .content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .content__title {
+        position: relative !important;
+        font-size: 26px !important;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .content__title-sub {
+        position: relative !important;
+        font-size: 15px;
+        text-align: center;
+        padding: 0 15px;
+        line-height: 1.6;
+        margin-top: 10px;
+    }
+
+    /* Ẩn cursor vì mobile không cần */
+    .cursor {
+        display: none !important;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/* ================= MOBILE LANDSCAPE ================= */
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .grid__item {
+        height: 110px !important;
+    }
+
+    .content__title {
+        font-size: 22px !important;
+    }
+
+    .content__title-sub {
+        font-size: 13px;
+    }
+}
