@@ -81,15 +81,6 @@ main {
 .pos-9 { grid-area: 40 / 26 / 51 / 32; }
 .pos-10 { grid-area: 37 / 39 / 48 / 47; }
 
-/* TITLE */
-.content__title {
-    font-family: myFont;
-    font-size: clamp(40px, 6vw, 70px);
-    text-align: center;
-    margin-bottom: 20px;
-    z-index: 2;
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .grid__item {
