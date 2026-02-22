@@ -94,7 +94,9 @@ main {
 .content__title-11 {
     font-family: myFont;
     font-size: 65px;
-    color: #ffe0b2;
+    background: linear-gradient(45deg, #ff7a00, #ffd000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     text-shadow:
         0 2px 4px rgba(0,0,0,0.9),
