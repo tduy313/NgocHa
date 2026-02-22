@@ -92,5 +92,40 @@ document.addEventListener('touchmove', function (e) {
     }
 }, { passive: false });
 </script>
+		<script>
+const grid = document.querySelector(".grid");
+
+function handleOrientation(event) {
+    let tiltX = event.beta;   // trước sau
+    let tiltY = event.gamma;  // trái phải
+
+    // Giới hạn góc để không xoay quá mạnh
+    tiltX = Math.max(-30, Math.min(30, tiltX));
+    tiltY = Math.max(-30, Math.min(30, tiltY));
+
+    const rotateX = tiltX / 5;
+    const rotateY = tiltY / 5;
+
+    grid.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+}
+
+// iOS cần xin quyền
+if (typeof DeviceOrientationEvent !== "undefined" &&
+    typeof DeviceOrientationEvent.requestPermission === "function") {
+
+    document.body.addEventListener("click", function () {
+        DeviceOrientationEvent.requestPermission()
+            .then(permissionState => {
+                if (permissionState === "granted") {
+                    window.addEventListener("deviceorientation", handleOrientation);
+                }
+            })
+            .catch(console.error);
+    }, { once: true });
+
+} else {
+    window.addEventListener("deviceorientation", handleOrientation);
+}
+</script>
 	</body>
 </html>
