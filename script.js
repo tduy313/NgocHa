@@ -6432,11 +6432,3 @@ parcelRequire = (function (modules, cache, entry, globalName) {
     document.body.classList.remove("loading");
     document.body.classList.add("loaded");
 });
-new Grid(
-    if (window.innerWidth < 768) {
-    document.body.classList.remove("loading");
-    document.querySelector(".cursor").style.display = "none";
-    // Không chạy animation grid trên mobile
-    throw new Error("Stop script on mobile");
-}
-);
