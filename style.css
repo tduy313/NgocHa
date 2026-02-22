@@ -88,11 +88,11 @@ main {
     margin-bottom: 20px;
     position: relative;
     z-index: 20;
-    font-family: 'myFont', cursive;
+    font-family: myFont;
 }
 
 .content__title-11 {
-    font-family: 'myFont', cursive;
+    font-family: myFont;
     font-size: 65px;
     color: #ffe0b2;
 
@@ -113,7 +113,7 @@ main {
     text-align: center;
     line-height: 1.6;
 
-    font-family: 'myFont', cursive;
+    font-family: myFont;
     font-size: 28px;
     color: #ffe0b2;
 
