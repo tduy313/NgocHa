@@ -94,8 +94,13 @@ main {
 .content__title-11 {
     font-family: myFont;
     font-size: 65px;
+
     background: linear-gradient(45deg, #ff7a00, #ffd000);
+
+    background-clip: text;              /* thêm dòng này */
     -webkit-background-clip: text;
+
+    color: transparent;                 /* thêm dòng này */
     -webkit-text-fill-color: transparent;
 
     text-shadow:
