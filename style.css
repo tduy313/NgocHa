@@ -104,6 +104,8 @@ main {
     -webkit-text-fill-color: transparent;
 
     text-shadow: 0 0 20px rgba(255, 180, 100, 0.6);
+    font-family: myFont;
+    src: url("Pacifico-Regular.ttf");
 }
 
 /* ================= SUB TEXT ================= */
