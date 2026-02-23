@@ -96,8 +96,6 @@ main {
     font-size: 65px;
     color: #ffb300;
 
-
-
     opacity: 0;
     transform: translateY(40px);
     animation: fadeUp 1.2s ease-out forwards;
